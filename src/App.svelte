@@ -1,4 +1,4 @@
-<script>
+<script lang="ts">
 	let i = 1;
 	let name = 'new'
 	let counter= 0;
@@ -15,6 +15,7 @@
 	}
 	function remove(box) {
 		boxes = boxes.filter(t => t !== box);
+		counter=0;
 	}
 	function increment() {
 		counter=counter + 1;
@@ -32,6 +33,7 @@
 <main>
 	<h1>Multiple Counter</h1>
 	{#each boxes as box (box.id)}
+
 <div class="counter-container">
 	<div class="container" id="counter_0">
 		<input class="counter-name" value={name}>
@@ -42,7 +44,7 @@
 		<button on:click="{() => remove(box)}" class="btn btn-delete">x</button>
 	</div>
 </div>
-		{/each}
+	{/each}
 
 	<button class="new-counter" on:click={addCounter}>new counter</button>
 	<p>title list:{name}</p>
@@ -163,4 +165,4 @@
 	
 	
 </style>
-<!-- ここから試験版 -->
+
