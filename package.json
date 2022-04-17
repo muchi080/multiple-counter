@@ -19,6 +19,7 @@
     "ts-migrate": "^0.1.28"
   },
   "dependencies": {
+    "@aws-amplify/ui-react": "^2.15.3",
     "sirv-cli": "^2.0.0",
     "svelte-preprocess": "^4.10.6"
   }
